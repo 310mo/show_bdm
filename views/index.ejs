@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1 id="hname"><%= title %></h1>
+    <form method="post" id="submit" action="/post">
+      <input type="email" name="ename" id="ename"><br>
+      <input type="submit" value="指定" id="sitei">
+    </form>
+    <br>
+    <div id="explain">入力したメールアドレスはメール送信のみに使い、それ以外の利用はいたしません. </div>
+
+  </body>
+</html>
