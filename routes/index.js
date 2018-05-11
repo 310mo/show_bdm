@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var ename="default address";
+var ename="310.teiya@gmail.com";
 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -16,7 +16,7 @@ var lasttime = 0;
 const mailSettings = {
   service: 'Gmail',
   auth: {
-      user: 'from address',
+      user: 'frommail',
       pass: 'pass',
       port: 25
   }
@@ -30,7 +30,7 @@ var mailOptions = {
   form: 'Node.js'
 };
 // portのpath
-const portPath = '/dev/cu.usbmodem1451';
+const portPath = '/dev/ttyACM0';
 // smtpのセッティングを初期化
 const smtp = nodemailer_1.createTransport(mailSettings);
 // portの設定
@@ -52,7 +52,7 @@ router.post('/post', (req, res, next) => {
     html: '<b>本日欠席させていただきます。</b>',
     form: 'Node.js'
   };
-  ename = 'default address';
+  ename = '310.teiya@gmail.com';
   flag = true;
   res.render('index', { title: 'スイッチ' });
 });
@@ -84,7 +84,7 @@ port.on('data', function (data) {
         flag = false;
         lasttime = nowtime;
         mailOptions = {
-          to: "default address",
+          to: "310.teiya@gmail.com",
           subject: '欠席連絡 ',
           text: "本日欠席させていただきます。",
           html: '<b>本日欠席させていただきます。</b>',
