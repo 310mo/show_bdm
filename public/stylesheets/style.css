@@ -16,7 +16,7 @@ a {
 #hname {
   color: white;
   text-align: center;
-  font-size: 100px;
+  font-size: 50px;
   text-shadow    : 
        2px  2px 1px #07f0aa,
       -2px  2px 1px #07f0aa,
@@ -48,6 +48,5 @@ a {
 }
 
 #explain {
-  text-align: center;
-  font-size: 20px;
+  font-size: 18px;
 }
